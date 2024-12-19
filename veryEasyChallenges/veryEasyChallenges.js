@@ -39,8 +39,8 @@ console.log(addNumbers(2, 3))
 ------------------------------------------
 Write a function, isPositive, that checks if a given number is positive or not. */
 
-function isPositive(){
-
+function isPositive(num){
+    return num > 0;
 }
 
 
