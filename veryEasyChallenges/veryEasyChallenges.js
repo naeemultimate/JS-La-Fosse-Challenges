@@ -56,8 +56,8 @@ console.log(isPositive(-3));
 -----------------------------------
 Write a function, multiple, that multiplies two numbers and returns the result.*/
 
-function multiply(){
-
+function multiply(a,b){
+    return a * b;
 }
 
 
