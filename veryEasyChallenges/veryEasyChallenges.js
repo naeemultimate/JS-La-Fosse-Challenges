@@ -70,14 +70,14 @@ console.log(multiply(4, 3));
 -----------------------------------------
 Write a function, minutesToSeconds, that converts a given number of minutes into seconds. */
 
-function minutesToSeconds(){
-
+function minutesToSeconds(num){
+    return num * 60;
 }
 
 
 
 //Example
-console.log(minutesToSeconds(5))
+console.log(minutesToSeconds(5)); // Checks out
 //Output: 300
 
 
