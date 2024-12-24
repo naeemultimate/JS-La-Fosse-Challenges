@@ -107,8 +107,8 @@ console.log(sumOrEqualto100(65, 75)) //Output: False
 Write a function that returns the string "hello" joined with a space " " and the given argument a.
 */
 
-function returnHello(){
-
+function returnHello(a){
+    return "Hello" + ' ' + a;
 }
 
 
@@ -122,8 +122,9 @@ console.log(returnHello("Ria")) //Output: "Hello Ria"
 Create a function that accepts an array and returns the last item in the array.
 */
 
-function getLastItem(){
-
+function getLastItem(array){
+    let lastItem = array.pop();
+    return lastItem;
 }
 
 
@@ -141,8 +142,12 @@ A vehicle needs 10 times the amount of fuel than the distance it travels. Howeve
 Create a function which calculates the amount of fuel it needs, given the distance.
 */
 
-function calculateFuel(){
-
+function calculateFuel(distance){
+    if (distance < 10){
+        return 100;
+    } else{
+        return distance * 10;
+    }
     
 }
 
@@ -162,8 +167,12 @@ A bartender is writing a simple program to determine whether he should serve dri
 
 Given the person's age, and whether break time is in session, create a function which returns whether he should serve drinks.*/
 
-function shouldServeDrinks(){
-    
+function shouldServeDrinks(age,onBreak){
+    if(age > 17 && onBreak === false){
+        return true;
+    } else {
+        return false;
+    }
 }
     
 
@@ -191,3 +200,4 @@ module.exports = {
     getLastItem
 }
 
+//COMPLETED veryEasyChallenges
