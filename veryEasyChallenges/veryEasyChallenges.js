@@ -148,7 +148,6 @@ function calculateFuel(distance){
     } else{
         return distance * 10;
     }
-    
 }
 
 

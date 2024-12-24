@@ -10,8 +10,9 @@
 ---------------------------------------
 Write a function that takes an array and an element as input and pushes the element into the array. */
 
-function pushToArray(){
-
+function pushToArray(arr,element){
+    arr.push(element);
+    return arr;
 }
 
 
@@ -19,6 +20,7 @@ function pushToArray(){
 // Example usage:
 const myArray = [1, 2, 3];
 console.log(pushToArray(myArray, 4)); // Output: [1, 2, 3, 4]
+console.log(pushToArray(myArray,"dog")); //My test output: [1,2,3,dog]
   
 
 /* Challenge 2: Filter Even Numbers
