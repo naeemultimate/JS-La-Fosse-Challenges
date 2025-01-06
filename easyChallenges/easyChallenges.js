@@ -143,8 +143,14 @@ console.log(sumArray([1, 2, 3, 4, 5])); // Output: 15
 Write a function that takes an array of numbers and returns the largest number in the array.
 */
 
-function largestNumber(){
-
+function largestNumber(arr){
+    let large = arr[0]; // start with first element as largest
+    for (let i=1; i < arr.length; i++){
+        if (arr[i] > large){ //if current iteration number is larger then set this to 'large' variable
+            large = arr[i]; 
+        }
+    }
+    return large;
 }
 
  
@@ -156,9 +162,12 @@ console.log(largestNumber([1, 5, 3, 9, 2])); //Output: 9
 ----------------------------------------------------
 Write a function that checks if a given string is a palindrome (reads the same forward and backward).
 */
-
-function isPalindrome(){
-
+//I need to do a check with reversed array vs normal array but also turn it back to string
+function isPalindrome(word){
+    let strArr = word.split(""); // e.g. ['r','a','c','e','c','a','r']
+    let reversedArr = strArr.reverse();
+    let reversedStr = reversedArr.join("");
+    return reversedStr === word;
 }
 
 

@@ -16,11 +16,16 @@
 // Write your function here
 
 function raffleWinners(array){
-
+    let emptyArr = []; //initialising empty array
+    let win = {};
+    for (let i=0; i < array.length; i++){
+      if( i % 2 !== 0 && array[i] % 2 !== 0){//if both ODD seat (index of array) & ticket (value)
+         let win = {seat: i , raffleTicket: array[i]};
+         emptyArr.push(win);
+      } 
     }
-    
-    
-    
+    return emptyArr;
+   }
     //Examples below 
     console.log(raffleWinners([2, 15, 7, 21 ]))
     // return [{seat: 1, raffleTicket: 15}, {seat:3, raffleTicket: 21}]
@@ -43,8 +48,12 @@ function raffleWinners(array){
     // It should return a number showing the total cost of ordering one of each item per guest! 
     
     function orderFood(food, guests){
-   
-
+      let totalCost = 0;
+      for (let item in food){
+         totalCost = totalCost + food[item];
+      }
+      let overallTotal = totalCost * guests; //Multiplying by guest number
+      return overallTotal;
     }
     
     
